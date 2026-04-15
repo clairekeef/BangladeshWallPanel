@@ -1,3 +1,5 @@
+
+/*
 (function(){
     //calculate inline position of a right element 
     async function rightPosition(){
