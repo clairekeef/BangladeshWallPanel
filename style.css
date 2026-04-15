@@ -97,7 +97,8 @@ body{
 /*credits section*/
 .credits{
     text-align:left;
-    margin-bottom:50px;
+    margin-bottom: 50px;
+    font-size: 10pt;
 }
 .credits > p{
     margin-bottom:5px;
