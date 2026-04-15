@@ -180,4 +180,5 @@
     document.addEventListener('scroll', vertCenter);
     window.addEventListener('resize', resize);
 
-})();
+})(); 
+*/
