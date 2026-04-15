@@ -1,6 +1,7 @@
 
 body{
     overflow-x:hidden;
+    font-family: "Georgia", serif;
 }
 .scroll-container{
     display:block;
