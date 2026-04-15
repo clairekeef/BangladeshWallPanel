@@ -13,7 +13,7 @@ body{
     position:sticky;
     display:block;
     top:0;
-    margin-bottom:20%;
+    margin-bottom:0%;
 }
 .foreground-item{
     position:relative;
@@ -59,12 +59,12 @@ body{
 
 /*bottom margin styles*/
 .row{
-    margin-bottom:5%;
+    margin-bottom:0%;
 }
 
 /*smaller bottom margin for rows in the foreground*/
 .foreground-item > .row{
-    margin-bottom:60%;
+    margin-bottom:0%;
 }
 .no-margin{
     margin-bottom:0 !important;
@@ -291,10 +291,10 @@ body{
         width: 100% !important;
     }
     .row{
-        margin-bottom:10vh !important;
+        margin-bottom:0vh !important;
     }
     .foreground-item > .row{
-        margin-bottom:5%;
+        margin-bottom:0%;
     }
     /*move slideshow caption*/
     .caption{
