@@ -478,20 +478,22 @@ p {
     }
   
     .map-panel {
-      height: 49vh;
-      height: 49svh;
-      z-index: 5;
-    }
+        height: 70vh;
+        height: 70svh;
+        z-index: 5;
+      }
   
     .story-panel {
       padding: 0 25px;
     }
   
+    
     .story-step {
-      min-height: 65vh;
-      min-height: 65svh;
-      padding: 48px 0;
+      min-height: 55svh;
+      padding: 30px 0;
     }
+  
+  
   
     .story-card {
       max-width: 640px;
