@@ -227,27 +227,40 @@ function activate(index) {
 }
 
 // Find the story section closest to the reading position
+
 function update() {
-  const target = window.innerHeight *
-    (window.innerWidth <= 800 ? 0.73 : 0.5);
 
-  let nearest = 0;
-  let distance = Infinity;
-
-  steps.forEach((step, i) => {
-    const rect = step.getBoundingClientRect();
-
-    const center = (rect.top + rect.bottom) / 2;
-    const difference = Math.abs(center - target);
-
-    if (difference < distance) {
-      distance = difference;
-      nearest = i;
+    // Always show the overview map at the top of the page
+    if (window.scrollY < 50) {
+      activate(0);
+      return;
     }
-  });
-
-  activate(nearest);
-}
+  
+    const isMobile = window.innerWidth <= 800;
+  
+    // Use a different reading position for mobile
+    const target = window.innerHeight * (
+      isMobile ? 0.85 : 0.5
+    );
+  
+    let nearest = 0;
+    let distance = Infinity;
+  
+    steps.forEach((step, i) => {
+      const rect = step.getBoundingClientRect();
+  
+      const center = (rect.top + rect.bottom) / 2;
+      const difference = Math.abs(center - target);
+  
+      if (difference < distance) {
+        distance = difference;
+        nearest = i;
+      }
+    });
+  
+    activate(nearest);
+  }
+  
 
 // Avoid unnecessary calculations during scrolling
 let pending = false;
@@ -272,3 +285,8 @@ window.addEventListener("resize", requestUpdate);
 // Initialize the first map
 update();
 
+
+window.addEventListener("load", () => {
+    update();
+  });
+  
