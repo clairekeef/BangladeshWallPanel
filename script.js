@@ -182,3 +182,93 @@
 
 })(); 
 */
+
+
+const steps = [...document.querySelectorAll(".story-step")];
+const maps = [...document.querySelectorAll(".map-image")];
+
+const mapNames = [
+  "Overview",
+  "Marine Feeding",
+  "Meghna Estuary",
+  "Upstream Migration"
+];
+
+let active = -1;
+
+// Activate a story section and its corresponding map
+function activate(index) {
+  if (index === active) return;
+
+  active = index;
+
+  const mapIndex = Number(steps[index].dataset.map);
+
+  // Crossfade between maps
+  maps.forEach((img, i) => {
+    img.classList.toggle("is-active", i === mapIndex);
+  });
+
+  // Highlight the active text section
+  steps.forEach((step, i) => {
+    step.classList.toggle("is-current", i === index);
+  });
+
+  // Update the map label
+  document.getElementById("map-label").textContent =
+    mapNames[mapIndex];
+
+  // Update progress
+  document.getElementById("progress-label").textContent =
+    `${index + 1} / ${steps.length}`;
+
+  document.getElementById("progress-fill").style.width =
+    `${100 * (index + 1) / steps.length}%`;
+}
+
+// Find the story section closest to the reading position
+function update() {
+  const target = window.innerHeight *
+    (window.innerWidth <= 800 ? 0.73 : 0.5);
+
+  let nearest = 0;
+  let distance = Infinity;
+
+  steps.forEach((step, i) => {
+    const rect = step.getBoundingClientRect();
+
+    const center = (rect.top + rect.bottom) / 2;
+    const difference = Math.abs(center - target);
+
+    if (difference < distance) {
+      distance = difference;
+      nearest = i;
+    }
+  });
+
+  activate(nearest);
+}
+
+// Avoid unnecessary calculations during scrolling
+let pending = false;
+
+function requestUpdate() {
+  if (pending) return;
+
+  pending = true;
+
+  requestAnimationFrame(() => {
+    pending = false;
+    update();
+  });
+}
+
+window.addEventListener("scroll", requestUpdate, {
+  passive: true
+});
+
+window.addEventListener("resize", requestUpdate);
+
+// Initialize the first map
+update();
+

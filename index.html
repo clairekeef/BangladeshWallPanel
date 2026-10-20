@@ -1,3 +1,4 @@
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +16,7 @@
 <body>
     <div class="content">
 
-        <!--title div-->
+       
         <div class="row">
             <div class="center">
                 <h2>The Monsoon Migration of Hilsa in Bangladesh</h2>
@@ -92,7 +93,181 @@
     </div>
 
 
-    <script type="text/javascript" src="/script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Monsoon Migration of Hilsa in Bangladesh</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="story-layout">
+
+    <!-- STICKY MAP PANEL -->
+    <div class="map-panel">
+      <div class="map-stack">
+
+        <img
+          class="map-image is-active"
+          src="CroppedOverviewMapIteration2MC2.png"
+          alt="Overview map of Bangladesh"
+        >
+
+        <img
+          class="map-image"
+          src="MF113Iteration2MC2.png"
+          alt="Marine feeding grounds"
+        >
+
+        <img
+          class="map-image"
+          src="MF213Iteration2MC2.png"
+          alt="Meghna estuary"
+        >
+
+        <img
+          class="map-image"
+          src="MF313Iteration2MC2.png"
+          alt="Upstream migration"
+        >
+
+      </div>
+
+      <div class="map-footer">
+        <span id="map-label">Overview</span>
+        <span id="progress-label">1 / 6</span>
+      </div>
+
+      <div class="progress-track">
+        <div id="progress-fill"></div>
+      </div>
+    </div>
+
+    <!-- SCROLLING STORY -->
+    <div class="story-panel">
+
+      <section class="story-step intro" data-map="0">
+        <div class="story-card">
+          <span class="eyebrow">A geographic story</span>
+          <h1>The Monsoon Migration of Hilsa in Bangladesh</h1>
+          <p class="byline">Claire Keef</p>
+          <p>
+            The migration of Hilsa is a seasonal movement that links
+            marine, estuarine, and freshwater environments in the
+            northern Bay of Bengal and Meghna River system.
+            This map shows the spatial progression of hilsa, a fish
+            local to the Bay of Bengal, migrating from marine feeding
+            grounds to river spawning and nursery areas.
+            This migration is influenced by various human and
+            environmental factors along the route.
+          </p>
+        </div>
+      </section>
+
+      <section class="story-step" data-map="1">
+        <div class="story-card">
+          <span class="eyebrow">Stage 1 of 5</span>
+          <h2>Marine Feeding Grounds</h2>
+          <p>
+            The northern Bay of Bengal serves as the primary marine
+            feeding ground for hilsa. Monsoon-associated (seasonal
+            wind-driven rains that increase river discharge) sediment
+            discharge and nutrients drive a high primary productivity
+            in these waters. During this phase, hilsa accumulate
+            energy from lipids that are essential for long-distance
+            migration and reproduction.
+          </p>
+        </div>
+      </section>
+
+      <section class="story-step" data-map="2">
+        <div class="story-card">
+          <span class="eyebrow">Stage 2 of 5</span>
+          <h2>Entering the Meghna Estuary</h2>
+          <p>
+            Hilsa are anadromous, meaning they spend most of their
+            adult life in marine environments, migrating to freshwater
+            environments to spawn. When the rivers achieve lower
+            salinity and higher water clarity, hilsa are stimulated
+            to move upstream. This takes place at the Meghna estuary
+            (where freshwater mixes with saltwater), one of the
+            largest estuarine systems in the world, connecting the
+            Bay of Bengal to Bangladesh's river network.
+          </p>
+        </div>
+      </section>
+
+      <section class="story-step" data-map="3">
+        <div class="story-card">
+          <span class="eyebrow">Stage 3 of 5</span>
+          <h2>Moving Upstream</h2>
+          <p>
+            Adult hilsa migrate upstream through the Meghna River
+            and its channels, swimming against the strong currents
+            from the monsoon. Migration often occurs in large groups,
+            a behavior that enhances orientation, reduces predation
+            risk, and improves energetic efficiency. This is an
+            intensive phase that relies exclusively on the energy
+            accumulated during marine feeding. Overall migration
+            success is closely related to the conditions in the
+            Bay of Bengal before the fish even enter the river system.
+          </p>
+        </div>
+      </section>
+
+      <section class="story-step" data-map="3">
+        <div class="story-card">
+          <span class="eyebrow">Stage 4 of 5</span>
+          <h2>Spawning and Nursery Habitats</h2>
+          <p>
+            Spawning occurs primarily in freshwater during peak
+            monsoon months. Eggs are released into the flowing river,
+            where they drift downstream seeking out lower-energy
+            environments, like floodplains and secondary river
+            channels. These are critical nursery habitats, providing
+            protection from the strong currents during early stages
+            of hilsa life.
+          </p>
+        </div>
+      </section>
+
+      <section class="story-step" data-map="0">
+        <div class="story-card">
+          <span class="eyebrow">Stage 5 of 5</span>
+          <h2>Human Impact and the Return Journey</h2>
+          <p>
+            This brings us back down to the Bay of Bengal. Young
+            hilsa migrate downstream to marine environments.
+            This migration coincides with fishing season and habitat
+            disruption, resulting in a high mortality rate among
+            young hilsa. To mitigate this, Bangladesh has a fishing
+            ban enforced during the peak season of September and
+            October, in which the capture of both juvenile and adult
+            hilsa is banned. Altogether, this monsoon-driven cycle
+            illustrates the life cycle of hilsa fish and their dynamic
+            relationship with the river, bay, and seasonal change.
+          </p>
+        </div>
+      </section>
+
+      <footer class="credits">
+        <p><strong>Credits:</strong></p>
+        <p>Data from Esri, OpenStreetMap</p>
+      </footer>
+
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
 
